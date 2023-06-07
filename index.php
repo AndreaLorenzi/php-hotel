@@ -65,12 +65,18 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($hotels as $hotel){
-                    foreach($hotel as $hotel_minardi){
-                        echo $hotel_minardi;
-                    }
-                }
-                 ?>
+                  <?php foreach ($hotels as $hotel) { ?>
+                   <tr>
+                        <td><?php echo $hotel['name']?></td>
+                        <td><?php echo $hotel['description']?></td>
+                        <td><?php echo $hotel['parking'] ? 'disponibile' : 'non disponibile'; ?></td>
+                        <td><?php echo $hotel['vote']?></td>
+                        <td><?php echo $hotel['distance_to_center']?> km </td>
+                    </tr>
+                      
+                   <?php } ?>
+                   
+              
             </tbody>
         </table>
     </div>
